@@ -1,0 +1,19 @@
+{
+  "toDoListItems": [
+    {
+      "description": "dry",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "description": "fold clothing",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "description": "washing",
+      "completed": false,
+      "id": 6
+    }
+  ]
+}

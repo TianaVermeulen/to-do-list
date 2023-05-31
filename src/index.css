@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #635985;
+  color: #ffffff;
+  @apply font-montserrat;
+}
+
+h1 {
+  @apply font-ubuntu;
+  margin-bottom: 50px;
+}
+
+.footer {
+  background-color: #443c68;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100vw;
+  padding-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+/* List Item Create */
+.add-button {
+  @apply hover:bg-cpurple-500 bg-cpurple-500 border-cpurple-200;
+}
+
+.input-bar {
+  background-color: #393053;
+}
+
+/* List Item View */
+
+.task-button {
+  @apply hover:bg-cpurple-500 bg-cpurple-400 border-cpurple-200;
+}
+
+.panel {
+  background-color: #443c68;
+  border-color: #443c68;
+}
+
+/* Check boxes */
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: #d367c1;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 100%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
